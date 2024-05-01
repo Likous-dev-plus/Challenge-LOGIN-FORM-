@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Caio-Login</title>
+
+    <style>
+        .container {
+            background-color: cyan;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            border-radius: 50px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <form action="" method="get">
+
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <label for="senha">Senha:</label>
+
+            <input type="password" name="senha" id="senha">
+            <label for="telefone">Telefone:</label>
+
+            <input type="number" name="telefone" id="telefone">
+            <label for="genero">Gênero:</label>
+
+            <select name="genero" id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <input type="submit" value="Enviar">
+
+            <input type="reset" value="Limpar">
+
+        </form>
+    </div>
+
+
 </body>
+
 </html>
