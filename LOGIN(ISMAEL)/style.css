@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+	background: linear-gradient(-45deg, #0b64ad, #072ab7e7, #0b77ad, #5701b9fb);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	font-family: 'Cabin Condensed', sans-serif;
+	color: #fff;
+	overflow: hidden;
+	align-items: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+	width: 400px;
+	margin: 50px auto;
+	padding: 20px;
+	background: rgba(96, 96, 96, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid rgba(255, 255, 255, 0.118);
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+p {
+	text-transform:capitalize;
+	font-size: small;
+	margin: 0;
+}
+
+
+:root {
+	--skyblue: #fff;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	border: none;
+	background: linear-gradient(to right, transparent, var(--skyblue), transparent);
+}
+
+
+label {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	border-radius: 4px 4px 2px 2px;
+	box-shadow: 0px 10px 20px -18px;
+}
+
+input:focus {
+	border-bottom: 2px solid #5b5fc7;
+	border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+	outline: 1px solid #5b5fc7;
+}
+
+.btn {
+	position: relative;
+	font-size: 17px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 1em 2.5em;
+	display: inline-block;
+	border-radius: 6em;
+	transition: all .2s;
+	border: none;
+	font-family: inherit;
+	font-weight: 500;
+	color: black;
+	background-color: white;
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	border-radius: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all .4s;
+}
+
+.btn::after {
+	background-color: #fff;
+}
+
+.btn:hover::after {
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
+}
+
+.quadrado1,
+.quadrado2,
+.quadrado3 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid rgba(255, 255, 255, 0.118);
+	animation-duration: 3s;
+	/* Duração da animação */
+	animation-timing-function: ease-in-out;
+	/* Função de tempo da animação */
+	animation-iteration-count: infinite;
+	/* Repetir infinitamente */
+}
+
+@keyframes wave {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.quadrado1 {
+	right: 102%;
+	animation-name: wave;
+	/* Aplica a animação */
+}
+
+.quadrado2 {
+	top: 25%;
+	left: 102%;
+	animation-name: wave;
+	/* Aplica a animação */
+	animation-delay: 0.5s;
+	/* Atraso para iniciar a animação */
+}
+
+.quadrado3 {
+	top: 95%;
+	left: 75%;
+	animation-name: wave;
+	/* Aplica a animação */
+	animation-delay: 1s;
+	/* Atraso maior para iniciar a animação */
+}
